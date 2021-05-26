@@ -46,8 +46,6 @@ namespace NSE.Identidade.API.Controllers
 
             if (result.Succeeded)
             {
-                //código de exemplo de como fazer login, mas aqui não é o objetivo
-                //await _signInManager.SignInAsync(user, false);
                 return CustomResponse(await GerarJwt(usuarioRegistro.Email));
             }
 
